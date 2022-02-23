@@ -3,7 +3,8 @@ server = express();
 const port = 5500;
 server.get('/', function (req, res) {
     console.log('welcome :' + req.ip);
-    res.send('Kero'+req.ip);
+    res.send('Kero' + req.ip + '  สวัสดีครับทุกคน');
+
 });
 server.use(function (req, res, next) {
     next();
