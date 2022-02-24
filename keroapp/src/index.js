@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import PanelButton from './PanelButton';
+import Testmovemouse from './Testmovemouse';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App /><PanelButton /><PanelButton /><Testmovemouse />
   </React.StrictMode>,
   document.getElementById('root')
 );
