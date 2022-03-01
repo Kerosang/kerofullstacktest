@@ -1,7 +1,7 @@
 
 
 function Testmovemouse() {
-
+var a = "kero";
     function myFunction(e) {
         var x = e.clientX;
         var y = e.clientY;
@@ -14,7 +14,7 @@ function Testmovemouse() {
     }
 
     return (
-        <></>
+        <html>{a}</html>
     )
 }
 export default Testmovemouse;

@@ -6,7 +6,16 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.bt-open{
+  text-align: center;
+  color: black;
+  background-color: red;
+}
+.bt-close{
+  text-align: center;
+  color: black;
+  background-color:greenyellow;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App /><PanelButton /><PanelButton /><Testmovemouse />
+    <App /><PanelButton /><Testmovemouse />
   </React.StrictMode>,
   document.getElementById('root')
 );
