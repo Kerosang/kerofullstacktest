@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import PanelButton from './PanelButton';
-import Testmovemouse from './Testmovemouse';
+import Login from './login';
+import Register from './register';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Content from './content';
 ReactDOM.render(
-  <React.StrictMode>
-    <App /><PanelButton /><Testmovemouse />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<App />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/content' element={<Content />} />
+      <Route path='/register' element={<Register />} />
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
