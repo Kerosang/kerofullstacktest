@@ -1,6 +1,7 @@
+
 const express = require('express');
 // const PDFGenerator = require('pdfkit')
-// const fs = require('fs')
+const fs = require('fs')
 var cors = require('cors')
 var bodyParser = require('body-parser')
 var jsonParser = bodyParser.json()
@@ -9,17 +10,13 @@ const bcrypt = require('bcrypt');
 const saltRounds = 7;
 var jwt = require('jsonwebtoken');
 const secret = 'kerologin';
-
 const port = 5500;
-
 const mysql = require('mysql2');
+let jsonmysql = require('./mysqlconnect.json')
+const objmysql = JSON.stringify(jsonmysql);
+const jsondataconnectmysql = JSON.parse(objmysql)
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: "drttech3005",
-    database: 'drt'
-});
+const connection = mysql.createConnection(jsondataconnectmysql);
 
 server.use(cors());
 
