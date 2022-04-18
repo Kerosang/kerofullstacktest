@@ -1,0 +1,26 @@
+<script src="paho.javascript-1.0.3/paho-mqtt.js"></script>
+<script>
+client = new Paho.MQTT.Client("128.199.125.67", Number(8883), "clientId");
+client.onConnectionLost = onConnectionLost;
+client.onMessageArrived = onMessageArrived;
+
+client.connect({onSuccess:onConnect});
+
+function onConnect() {
+  console.log("onConnect");
+  client.subscribe("KERO");
+  message = new Paho.MQTT.Message("Hello MQTT");
+  message.destinationName = "TEST/MQTT";
+  client.send(message);
+}
+
+function onConnectionLost(responseObject) {
+  if (responseObject.errorCode !== 0) {
+    console.log("onConnectionLost:"+responseObject.errorMessage);
+  }
+}
+
+function onMessageArrived(message) {
+  console.log("onMessageArrived:"+message.payloadString);
+}
+</script>
