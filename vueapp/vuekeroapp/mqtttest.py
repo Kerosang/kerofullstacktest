@@ -24,6 +24,6 @@ client.on_connect = on_connect
 client.on_subscribe = on_subscribe
 
 # Connecting to Broker
-client.connect('128.199.125.67', 1883)
+client.connect('chatchalerm.tk', 1883)
 
 client.loop_forever()
